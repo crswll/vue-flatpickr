@@ -1,0 +1,25 @@
+{
+  "name": "vue-flatpickr",
+  "version": "0.0.1",
+  "description": "A Vue component that wraps the Flatpickr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrainlau/vue-flatpickr.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-component",
+    "Flatpickr",
+    "vue-flatpickr"
+  ],
+  "author": "Jrain Lau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrainlau/vue-flatpickr/issues"
+  },
+  "homepage": "https://github.com/jrainlau/vue-flatpickr#readme"
+}
