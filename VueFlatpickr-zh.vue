@@ -8,8 +8,15 @@ import Flatpickr from './assets/flatpickr-zh.js'
 export default {
   props: {
     options: {
-      type: Object,
-      default: () => {}
+      type: Object
+    }
+  },
+  watch: {
+    options: {
+      handler() {
+        this.newFlatpickr()
+      },
+      deep: true
     }
   },
   ready() {
