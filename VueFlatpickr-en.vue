@@ -1,11 +1,20 @@
 <template>
-  <input type="text" id="vue-flatpickr">
+  <input type="text" :data-selector="selector">
 </template>
 
 <script>
 import Flatpickr from './assets/flatpickr-en.js'
 
 export default {
+  computed: {
+    selector() {
+      let t = ''
+      for(let i = 0; i < 15; i++) { 
+          t += Math.floor(Math.random() * 10) 
+      }
+      return 'vue-flatpickr-' + t
+    }
+  },
   props: {
     options: {
       type: Object
@@ -20,10 +29,10 @@ export default {
     }
   },
   ready() {
-    new Flatpickr(document.querySelector('#vue-flatpickr'), this.options)
+    new Flatpickr(document.querySelector(`[data-selector=${this.selector}]`), this.options)
   },
   mounted() {
-    new Flatpickr(document.querySelector('#vue-flatpickr'), this.options)
+    new Flatpickr(document.querySelector(`[data-selector=${this.selector}]`), this.options)
   }
 }
 </script>
